@@ -1,2 +1,2 @@
 # css-tricks
-纯css实现的特效
+纯css实现的效果

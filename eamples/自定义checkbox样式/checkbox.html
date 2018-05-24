@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<title></title>
+<style>
+  body{
+    padding: 60px 200px;
+    user-select: none;
+  }
+
+
+  #check {
+    margin: 20px auto;
+  } 
+  #check .input_check {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+    background: #E92333;
+  } 
+  #check span {
+    position: relative;
+  } 
+  #check .input_check+label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('./hook.png') no-repeat;
+    background-position: -20px -20px;
+    border: 1px solid skyblue;
+  } 
+  #check .input_check:checked+label {
+    background-position: 0 0;
+  }
+
+  /* #check_css3 {
+    margin: 20px;
+    list-style: none;
+  }
+  #check_css3 li {
+    position: relative;
+    margin-top: 20px;
+  }
+  #check_css3 .input_check {
+    position: absolute;
+    visibility: hidden;
+  }
+  #check_css3 .input_check+label {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #414141;
+  } 
+  #check_css3 .input_check:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 13px;
+    width: 12px;
+    height: 5px; 
+    border: 2px solid #f59417;
+    border-top-color: transparent;
+    border-right-color: transparent; 
+    -ms-transform: rotate(-60deg); 
+    -moz-transform: rotate(-60deg); 
+    -webkit-transform: rotate(-60deg); 
+    transform: rotate(-45deg);
+  } */
+</style>
+</head>
+<body>
+    
+    <h3>1.使用背景图片代替选中效果 </h3>
+    <p>
+      主要原理就是将原来的checkbox隐藏：visibility: hidden属性
+      但它依然占据位置，用图片代替它的位置。 优点就是兼容性好 
+    </p>
+    <div id="check"> 
+      <span><input type="checkbox"class="input_check" id="check1"><label for="check1"></label></span> 
+      <span><input type="checkbox"class="input_check" id="check2"><label for="check2"></label></span> 
+    </div>
+
+    <h3>2.使用css3实现 </h3>
+    <p>
+        主要是利用after，缺点是存在兼容性问题。
+    </p>
+    <!-- <ul id="check_css3">
+        <li>
+          <input type="checkbox"class="input_check" id="check3">
+          <label for="check3"></label>
+        </li>
+        <li>
+          <input type="checkbox"class="input_check" id="check2">
+          <label for="check2"></label>
+        </li>
+    </ul> -->
+ </body>
+ </html>
